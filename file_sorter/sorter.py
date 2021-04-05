@@ -6,16 +6,19 @@ import sys
 def sortDirectory(directory, func=shutil.move):
 
     if not os.path.isdir(directory):
-        return 1
+        return
 
     for root, dirs, files in os.walk(directory):
+        for dir in dirs:
+            if not os.path.exists(os.path.join(str(directory), "Directories")):
+                os.makedirs(os.path.join(str(directory), "Directories"))
+            func(os.path.join(root, os.path.splitext(dir)[0]), os.path.join(str(directory), "Directories"))
         for file in files:
-
-            name, ext = os.path.splitext(file)
-            ext = ext[1:]
-
+            name, ext = os.path.splitext(file); ext = ext[1:]
+            #print("name: " + name + ", ext: " + ext)
             if not os.path.exists(os.path.join(str(directory), ext)):
                 os.makedirs(os.path.join(str(directory), ext))
+
 
             if os.path.exists(os.path.join(str(directory), ext, file)):
                 count = 1
@@ -32,24 +35,8 @@ def sortDirectory(directory, func=shutil.move):
 
 
 def main():
-
-    functionDict = {
-        'm': shutil.move,
-        'c': shutil.copy,
-    }
     flag = shutil.move
-    if len(sys.argv) == 3:
-        if sys.argv[2].lower()[0] in functionDict:
-            flag = functionDict[sys.argv[2].lower()[0]]
-        else:
-            print("Unsupported 3rd argument. Use 'm'ove or 'c'opy")
-            return 1
-
-    elif len(sys.argv) == 1 or len(sys.argv) > 3:
-        print("Wrong amount of arguments. Only 2 arguments supported: [path function]")
-        return 1
-
-    return sortDirectory(sys.argv[1], flag)
+    return sortDirectory(input("file path here: "), flag)
 
 
 if __name__ == '__main__':

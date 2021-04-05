@@ -19,7 +19,6 @@ while True:
     Screen.fill("#66402B")
     Screen.blit(idle_right[player_ani], player)
 
-    if 
     pygame.display.update()
 
 
