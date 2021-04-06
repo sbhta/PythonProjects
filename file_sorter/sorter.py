@@ -12,7 +12,7 @@ def sortDirectory(directory, func=shutil.move):
         for dir in dirs:
             if not os.path.exists(os.path.join(str(directory), "Directories")):
                 os.makedirs(os.path.join(str(directory), "Directories"))
-            func(os.path.join(root, os.path.splitext(dir)[0]), os.path.join(str(directory), "Directories"))
+            func(os.path.join(root, os.path.splitext(dir)[0]), os.path.join(str(directory), "Directories "))
         for file in files:
             name, ext = os.path.splitext(file); ext = ext[1:]
             #print("name: " + name + ", ext: " + ext)
