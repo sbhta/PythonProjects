@@ -1,8 +1,7 @@
 #  PNG TO ASCII
 
-![How this works](/Capture.png)
+![](gameplay_futage.gif)
 
-> This image shows the result of the program
 
 
 ---
