@@ -1,6 +1,6 @@
 #  PNG TO ASCII
 
-![]()
+![the game](2021-04-18 21-34-53.gif)
 
 
 
@@ -8,12 +8,7 @@
 
 ## Description
 
-This program takes a .png type file and transforms it into text that looks
-like the image. it got its own GUI
+This is a simple game, flappy bird alike. its pretty much endless and can be
+played for ever.
 
-#### STEPS
 
-- open the program
-- click on the "file" button
-- choose the file you want to transform into text
-- THERE! you got a text that looks like the original image
