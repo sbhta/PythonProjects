@@ -21,7 +21,7 @@ with window("win", width=1680, height=1050):
 
 
     def ask_for_file():
-        open_file_dialog(callback=applySelectedDirectory, extensions=".jpg,.png")
+        open_file_dialog(callback=applySelectedDirectory, extensions=".png,.jpg")
     #add_text("Input a file")
     add_button("FILE", callback=ask_for_file)
 
