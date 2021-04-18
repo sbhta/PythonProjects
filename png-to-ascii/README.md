@@ -1,6 +1,6 @@
 #  PNG TO ASCII
 
-[Example](https://raw.githubusercontent.com/sbhta/PythonProjects/main/png-to-ascii/examples/Capture.png)
+[Example](/png-to-ascii/examples/Capture.png)
 
 > This is a ReadMe template to help save you time and effort.
 
