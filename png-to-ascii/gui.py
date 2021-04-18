@@ -2,7 +2,7 @@ from dearpygui.core import *
 from dearpygui.simple import *
 from functions import *
 
-set_main_window_size(100, 100)
+set_main_window_size(1680, 1050)
 set_style_window_padding(30, 30)
 set_theme("Gold")
 set_global_font_scale(0.8)
