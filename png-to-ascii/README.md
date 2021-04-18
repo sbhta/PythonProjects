@@ -1,6 +1,6 @@
 #  PNG TO ASCII
 
-![How this works](/png-to-ascii/examples/Capture.png)
+![How this works](examples/Capture.png)
 
 > This is a ReadMe template to help save you time and effort.
 
