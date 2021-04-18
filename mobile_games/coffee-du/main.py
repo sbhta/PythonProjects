@@ -7,8 +7,8 @@ def main():
     global score, possible_spots, coffee_bean_pos, threads, coffee_bean_state
     # preparations
     Screen = pygame.display.set_mode((600, 700))
-    CoffeeDu = pygame.transform.scale(pygame.image.load("coffeedu.png"), (49, 37))
-    CoffeeBean = pygame.transform.scale(pygame.image.load("coffee_bean.png"), (24, 24))
+    CoffeeDu = pygame.transform.scale(pygame.image.load("png/coffeedu.png"), (49, 37))
+    CoffeeBean = pygame.transform.scale(pygame.image.load("png/coffee_bean.png"), (24, 24))
     Clock = pygame.time.Clock()
     pygame.display.set_icon(CoffeeDu)
 
@@ -34,7 +34,7 @@ def main():
     player_move = 1
     coffee_bean_pos = "right"
     score = 0
-    game_font = pygame.font.Font("04B_19.TTF", 60)
+    game_font = pygame.font.Font("font/04B_19.TTF", 60)
     possible_spots = [650, 600, 550, 500, 450, 400, 350, 300, 250, 200, 150, 100, 50]
     coffee_bean_state = True
 
