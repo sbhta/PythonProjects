@@ -8,7 +8,7 @@
 
 ## Description
 
-This is a simple game, flappy bird alike. its pretty much endless and can be
+This is a simple, flappy bird like, game. its pretty much endless and can be
 played for ever.
 
 
