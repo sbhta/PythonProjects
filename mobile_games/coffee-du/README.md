@@ -1,6 +1,6 @@
 #  PNG TO ASCII
 
-![the game](2021-04-18 21-34-53.gif)
+![the game](/2021-04-18 21-34-53.gif)
 
 
 
