@@ -1,6 +1,6 @@
 #  PNG TO ASCII
 
-![](gameplay_futage.gif)
+![]()
 
 
 
