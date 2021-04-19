@@ -15,7 +15,7 @@ proud of.
 ## Skills:
 - As said above I have been learning python for about 3 years at this point.
 - I have got minor experience in the database SQLite, but it's not as good as I want it.
-- I am very experienced in creating GUIs in the different modules such as: 
+- I would consider my self pretty experienced in creating GUIs in the different modules such as: 
   pygame, tkinter, turtle and DearPyGui. be it a simple one for a card game,
   or a complex software that can run in the background.
   
