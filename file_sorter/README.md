@@ -1,7 +1,7 @@
 #  about the user
-#  BEFORE
+###  BEFORE
 ![BEFORE](before.PNG)
-#  AFTER
+###  AFTER
 ![AFTER](after.PNG)
 
 > welcome to the git page of sbhta
