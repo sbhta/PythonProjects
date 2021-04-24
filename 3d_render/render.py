@@ -19,7 +19,7 @@ angle = 0
 points = []
 
 # all the cube vertices
-points.append(np.matrix([-1, -1, 1]))
+points.append(np.matrix([   -1, -1, 1]))
 points.append(np.matrix([1, -1, 1]))
 points.append(np.matrix([1,  1, 1]))
 points.append(np.matrix([-1, 1, 1]))
