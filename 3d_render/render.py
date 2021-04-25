@@ -12,29 +12,27 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT))
 
 scale = 100
 
-circle_pos = [WIDTH/2, HEIGHT/2]  # x, y
+circle_pos = [WIDTH / 2, HEIGHT / 2]  # x, y
 
 angle = 0
 
 points = []
 
 # all the cube vertices
-points.append(np.matrix([   -1, -1, 1]))
+points.append(np.matrix([-1, -1, 1]))
 points.append(np.matrix([1, -1, 1]))
-points.append(np.matrix([1,  1, 1]))
+points.append(np.matrix([1, 1, 1]))
 points.append(np.matrix([-1, 1, 1]))
 points.append(np.matrix([-1, -1, -1]))
 points.append(np.matrix([1, -1, -1]))
 points.append(np.matrix([1, 1, -1]))
 points.append(np.matrix([-1, 1, -1]))
 
-
 projection_matrix = np.matrix([
     [1, 0, 0],
     [0, 1, 0],
     [0, 0, 0]
 ])
-
 
 projected_points = [
     [n, n] for n in range(len(points))
@@ -100,8 +98,8 @@ while True:
         i += 1
 
     for p in range(4):
-        connect_points(p, (p+1) % 4, projected_points)
-        connect_points(p+4, ((p+1) % 4) + 4, projected_points)
-        connect_points(p, (p+4), projected_points)
+        connect_points(p, (p + 1) % 4, projected_points)
+        connect_points(p + 4, ((p + 1) % 4) + 4, projected_points)
+        connect_points(p, (p + 4), projected_points)
 
     pygame.display.update()
