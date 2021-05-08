@@ -25,5 +25,3 @@ for i in deck:
     elif i.value == 12: i.value = "Q"
     elif i.value == 13: i.value = "K"
     elif i.value == 1: i.value = "A"
-
-
