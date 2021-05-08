@@ -1,4 +1,5 @@
 class Card:
     def __init__(self, value, suite):
-        self.value = value
+        self.value = int(value)
         self.suite = suite
+
