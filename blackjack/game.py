@@ -1,5 +1,5 @@
 import random
-from time import time
+from time import sleep
 from classes import *
 
 
@@ -51,6 +51,12 @@ def show_player_card():
     for i in player_hand:
         print("# {} {} {} #".format(i.suite, i.value, i.suite), end="    ")
 
+def show_dealer_card():
+    print("""
+    YOUR HAND:""")
+    for i in dealer_hand:
+        print("# {} {} {} #".format(i.suite, i.value, i.suite), end="    ")
+
 show_player_card()
 
 player_hand_value = add_to_value(player_hand_value, player_hand[0].value)
@@ -60,7 +66,6 @@ dealer_hand_value = add_to_value(dealer_hand_value, dealer_hand[0].value)
 dealer_hand_value = add_to_value(dealer_hand_value, dealer_hand[1].value)
 
 for i in range(1, 5):
-
     if player_hand_value <= 21:
         inp = input("""
     More?(y/n)""")
@@ -69,12 +74,55 @@ for i in range(1, 5):
             player_hand_value = add_to_value(player_hand_value, player_hand[-i].value)
             show_player_card()
         elif inp == "n":
-            print(player_hand_value)
+            print("""
+    please wait for the dealers to draw a card...""")
+            sleep(1)
+            if dealer_hand_value < 17:
+                dealer_hand.append(deck.pop())
+                dealer_hand_value = add_to_value(dealer_hand_value, dealer_hand[-1].value)
+
+
+            print("""
+    ## THE CURRENT TABLE ##""")
+
+            print("""
+    dealers cards: """, end="   ")
+            for i in dealer_hand:
+                print("# {} {} {} #".format(i.suite, i.value, i.suite), end="    ")
+
+            print("""
+    players cards: """, end="   ")
+            for i in player_hand:
+                print("# {} {} {} #".format(i.suite, i.value, i.suite), end="    ")
+
+            print("""
+            
+    your card value {}
+    dealers card value {}
+    """.format(str(player_hand_value), str(dealer_hand_value)))
+            if dealer_hand_value > player_hand_value:
+                print("""
+    IM VERY SORRY BUT YOU LOST (LOL)""")
+            elif dealer_hand_value < player_hand_value:
+                print("""
+    YOU WON, NICE (shit)""")
+            elif dealer_hand_value == player_hand_value:
+                print("""
+    OH NO, A DRAW, BETTER LUCK NEXT TIME!""")
+
             break
+
+
+
         else:
             print("""
     please enter a valid answer""")
+
     else:
-        print("""
-    SORRY, YOU LOST""")
-        break
+        for card in player_hand:
+            if card.value == 11:
+                card.value = 1
+        if player_hand_value > 22:
+                 print("""
+             SORRY, YOU LOST""")
+                 break
