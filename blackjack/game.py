@@ -98,8 +98,7 @@ for i in range(1, 5):
             print("""
             
     your card value {}
-    dealers card value {}
-    """.format(str(player_hand_value), str(dealer_hand_value)))
+    dealers card value {}""".format(str(player_hand_value), str(dealer_hand_value)))
             if dealer_hand_value > player_hand_value:
                 print("""
     IM VERY SORRY BUT YOU LOST (LOL)""")
