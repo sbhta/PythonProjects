@@ -49,10 +49,10 @@ while True:
         if snake_array[-1].x == i.x and snake_array[-1].y == i.y:
             sys.exit()
 
-    if snake_array[-1].x >= 800: snake_array[-1].x = 0
-    if snake_array[-1].x <= 0: snake_array[-1].x = 800
-    if snake_array[-1].y >= 800: snake_array[-1].y = 0
-    if snake_array[-1].y <= 0: snake_array[-1].y = 800
+    if snake_array[-1].x > 800: snake_array[-1].x = 0
+    if snake_array[-1].x < 0: snake_array[-1].x = 800
+    if snake_array[-1].y > 800: snake_array[-1].y = 0
+    if snake_array[-1].y < 0: snake_array[-1].y = 800
 
 
     a.eaten(snake_array[-1])

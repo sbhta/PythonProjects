@@ -44,5 +44,5 @@ class apple:
         if head.x == self.x and head.y == self.y:
             self.x = randint(1, 50) * 16
             self.y = randint(1, 50) * 16
-            self.snake.insert(0, s_part(self.snake[0].x, self.snake[0].y))
+            self.snake.insert(0, s_part(self.snake[0].oldX, self.snake[0].oldY))
 
