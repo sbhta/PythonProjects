@@ -8,7 +8,7 @@ screen = pygame.display.set_mode((screen_x, screen_y))
 snake_size = 1
 snake_array = [head(384, 400)]
 
-a = apple(randint(1, 49) * 16, randint(1, 49) * 16, snake_array)
+a = apple(randint(1, 48) * 16, randint(1, 48) * 16, snake_array)
 
 clock = pygame.time.Clock()
 tps = 10
