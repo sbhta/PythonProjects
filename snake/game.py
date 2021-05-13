@@ -8,7 +8,7 @@ screen = pygame.display.set_mode((screen_x, screen_y))
 snake_size = 1
 snake_array = [head(384, 400)]
 
-a = apple(randint(1, 48) * 16, randint(1, 48) * 16, snake_array)
+a = apple(randint(1, 46) * 16, randint(1, 46) * 16, snake_array)
 
 clock = pygame.time.Clock()
 tps = 10
@@ -49,10 +49,10 @@ while True:
         if snake_array[-1].x == i.x and snake_array[-1].y == i.y:
             sys.exit()
 
-    if snake_array[-1].x > 800: snake_array[-1].x = 0
-    if snake_array[-1].x < 0: snake_array[-1].x = 800
-    if snake_array[-1].y > 800: snake_array[-1].y = 0
-    if snake_array[-1].y < 0: snake_array[-1].y = 800
+    if snake_array[-1].x > 784: snake_array[-1].x = 0
+    if snake_array[-1].x < 0: snake_array[-1].x = 784
+    if snake_array[-1].y > 784: snake_array[-1].y = 0 
+    if snake_array[-1].y < 0: snake_array[-1].y = 784
 
 
     a.eaten(snake_array[-1])
