@@ -42,7 +42,7 @@ class apple:
         pygame.draw.rect(screen, "red", (self.x, self.y, 16, 16))
     def eaten(self, head):
         if head.x == self.x and head.y == self.y:
-            self.x = randint(1, 50) * 16
-            self.y = randint(1, 50) * 16
+            self.x = 400
+            self.y = 400
             self.snake.insert(0, s_part(self.snake[0].oldX, self.snake[0].oldY))
 
